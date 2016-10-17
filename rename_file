@@ -1,0 +1,16 @@
+#!/bin/bash 
+#
+# PURPOSE
+#   Rename specific portions of filenames in batches.
+# USAGE
+#   rename_file find replace
+# KEYWORDS
+#   find - string that you need to replace
+#   replace - string that you replace "find" with
+# HISTORY
+#   2016/10/17 Created by Chenxing Dong
+
+for i in `ls | grep $1`
+do
+	mv $i ${i/$1/$2}
+done

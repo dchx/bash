@@ -3,8 +3,9 @@
 # PURPOSE
 #   Rename specific portions of filenames in batches.
 # USAGE
-#   rename_file find replace
+#   rename_file grep find replace
 # KEYWORDS
+#   grep - string that filenames you want to rename contain
 #   find - string that you need to replace
 #   replace - string that you replace "find" with
 # HISTORY
@@ -12,5 +13,5 @@
 
 for i in `ls | grep $1`
 do
-	mv $i ${i/$1/$2}
+	mv $i ${i/$2/$3}
 done

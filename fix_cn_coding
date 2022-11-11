@@ -1,0 +1,14 @@
+#!/bin/bash 
+#
+# PURPOSE
+#   Fix coding of Chinese text files created in Windows but viewed in MacOS 
+# USAGE
+#   fix_cn_coding file
+# INPUTS
+#   file - (xxx.yyy) the file to fix
+# OUTPUTS
+#   xxx_fixed.txt - the fixed file
+# HISTORY
+#   2022/11/11 Created by Chenxing Dong
+
+iconv -f GBK $1 > ${1%.*}_fixed.txt
